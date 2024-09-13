@@ -4,7 +4,8 @@ const { GatewayIntentBits } = require("discord.js")
 const client = new Client({
     intents: [
         "MessageContent",
-        "GuildMessages"
+        "GuildMessages",
+        "Guilds"
     ]
 })
 client.eventos("src/eventos")

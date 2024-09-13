@@ -1,7 +1,7 @@
 module.exports = {
     name: "messageCreate",
     run: async (message) => {
-        if (message.author.bot) return;
+	if (message.author.bot) return;
         const prefix = "!"
         if (!message.content.startsWith(prefix)) return;
         const args = message.content.slice(prefix.length).trim().split(/ +/);
