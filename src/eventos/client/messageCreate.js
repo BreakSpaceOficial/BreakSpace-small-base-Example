@@ -6,9 +6,8 @@ module.exports = {
         if (!message.content.startsWith(prefix)) return;
         const args = message.content.slice(prefix.length).trim().split(/ +/);
         const commandName = args.shift().toLowerCase();
-
         const cmd = message.client.prefixCommands.get(commandName)
-
+	if(!cmd) return;
         try {
             cmd.run(message)
             return
